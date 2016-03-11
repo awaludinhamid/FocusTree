@@ -1,0 +1,369 @@
+body {
+  /*background: linear-gradient(to bottom right, #eef, #0000ff);
+  background: -moz-linear-gradient(left top, #eef, #0000ff);
+  background: -webkit-linear-gradient(left top, #eef, #0000ff);
+  background-repeat: no-repeat;*/
+}
+
+.node circle {
+  fill: #fff;
+}
+
+.node text {
+	font-size: 12px;
+	/*font-weight: bold;
+	text-decoration: underline;*/
+}
+
+.node rect {
+	fill: lightgrey;
+	fill-opacity: 0.5;
+}
+
+path.link {
+	fill: none;
+	stroke: #aaa;
+	stroke-width: 1.5px;
+}
+
+div.tooltip {
+	position: absolute;
+	text-align: left; 
+	padding: 2px;
+	font: 10px sans-serif;
+	background: lightsteelblue;
+	border: 5px;
+	border-radius: 8px;
+}
+
+div.linktip {
+	position: absolute;
+}
+
+.app-def-position {
+	position: fixed;
+        left: 10px;
+	top: 100px;
+        z-index: 2;
+        opacity: 0.9;
+        border-width: 0px 3px 3px 0px;
+        border-style: solid;
+        border-color: white;
+        padding-right: 4px;
+        box-shadow: #888 1px 1px 0px 0.5px;
+}
+
+div ul li span {
+	width: 230px;
+  word-spacing: -8px;
+}
+
+div.tooltip table td, div#dialog-message table td {
+	border: solid 1px cadetblue; padding: 3px;
+}
+
+div#insetBgd {
+	position: fixed;
+	height: 65px;
+        width: 100%;
+        top: 0px;
+        z-index: 5;
+        margin: 0 auto;
+        background: linear-gradient(#159, white, #159);
+        background: -o-linear-gradient(#159, white, #159);
+        background: -ms-linear-gradient(#159, white, #159);
+	background: -moz-linear-gradient(#159, white, #159);
+	background: -webkit-linear-gradient(#159, white, #159);
+}
+
+span.insetType {
+	/*padding-left: 5px; * The padding is just there to move the h1 element to the center of the div *
+	padding-top: 10px;
+	font-family: Rockwell, Georgia, "Times New Roman", Times, serif;*/
+	font-size: 25px;
+        font-weight: bold;
+	/*text-decoration: underline;#0D4383*/
+	color: white;
+	text-shadow: rgba(0,0,0,0.5) -2px 0, rgba(0,0,0,0.3) 0 -2px, rgba(80,80,144,0.8) 0 3px, rgba(0,0,0,0.3) -2px -2px;
+}
+
+div#otherMenu {
+	position: absolute;
+	top: 0px;
+	right: 20px;
+	color: white;
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        text-shadow: 2px 2px 2px #559;
+}
+
+div#usage {
+  position: fixed;
+  bottom: 5px;
+  left: 10px;
+  padding: 5px;
+  color: white;
+  background: #444;
+  font-size: 12px;
+  opacity: 0.8;
+  border-radius: 5px;
+  border: red solid 2px;
+}
+
+.mirror {
+  opacity: 0.2;
+  height: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  /*background: linear-gradient(black, #bbb);*/
+  transform: rotateX(180deg);
+  animation-name: text-blink;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes text-blink {
+  0% {opacity: 0.2;}
+  50% {opacity: 0.05;}
+  100% {opacity: 0.2;}
+}
+
+.modal-header {
+  color: white;
+  background-color: #37b;
+}
+.close span {
+  color: white;
+}
+.modal-footer {
+  background-color: #ddd;
+}
+
+.left-back-pos {
+  position: fixed;
+  width: 250px;
+  background-color: lightskyblue;
+}
+.left-front-pos {
+  position: absolute;
+  top: 80px;
+  left: 10px;
+  //max-width: 15%;
+}
+.left-front-pos ul {
+  padding: 0;
+}
+.center-back-pos {
+  position: fixed;
+  left: 270px;
+  background-color: lightsteelblue;
+  width: 100%;
+}
+.center-front-pos {
+  position: absolute;
+  top: 100px;
+  left: 280px;
+  max-width: 80%;
+}
+.back-def-style {
+  height: 100%;
+  opacity: 0.4;
+  z-index: -1;
+}
+.split-back {
+  position: fixed;
+  left: 250px;
+  width: 20px;
+  background: linear-gradient(right, #888, white, #888);
+  background: -o-linear-gradient(right, #888, white, #888);
+  background: -ms-linear-gradient(right, #888, white, #888);
+  background: -moz-linear-gradient(right, #888, white, #888);
+  background: -webkit-linear-gradient(left, #888, white, #888);
+}
+
+#zoom-slider {
+  position: fixed;
+  top: 75px;
+  left: 35px;
+  background-color: #888;
+  width: 60px;
+  height: 5px;
+  z-index: 10;
+}
+#zoom-slider button {
+  position: absolute;
+  font-size: 10px;
+  color: white;
+  background-color: #37b;
+  border-radius: 4px;
+}
+#zoom-slider button:hover {
+  background-color: #159;
+}
+#zoom-slider #btn-zoom-in {
+  left: -26px;
+  top: -6px;
+  padding: 2px 5px;
+}
+#zoom-slider #btn-zoom-out {
+  left: 63px;
+  top: -6px;
+  padding: 2px 5px;
+}
+#zoom-slider #btn-slider {
+  left: 27px;
+  top: -7px;
+  padding: 0;
+  cursor: default;  
+}
+#zoom-slider #btn-expand-collapse {
+  left: 103px;
+  top: -6px;
+  padding: 2px 6px;
+}
+#zoom-slider #btn-back {
+  left: 150px;
+  top: -6px;
+  padding: 2px 6px;
+  display: none;
+}
+
+/*class adding later*/
+#body {
+  position: relative;
+  left: 80px;
+  z-index: 0;
+}
+#foreignObject button {
+  padding: 1px;
+  font-size: 10px;
+}
+.table-data-hover {
+  font-weight: bolder;
+  table-layout: fixed;
+}
+.table-data-hover thead {
+  background-color: lightgrey;
+}
+.default-message {
+  position: relative;
+  top: 100px;
+  width: 40%;
+  margin: auto;
+  text-align: center;
+}
+.default-message>h1>span {
+  color: red;
+}
+.default-message>h1>div {
+  padding: 10px;
+  border: 5px solid #555;
+  margin: 0;
+  border-radius: 25px;
+}
+.default-message .hr-top {
+  border-color: #555;
+  border-width: 5px;
+}
+.default-message .hr-down {
+  border-color: #bbb;
+  border-width: 2px;
+}
+.form-signin .error-login {
+  color: red;
+  font-weight: bold;
+}
+
+/* animation */
+div#period-anime {
+  z-index: 10;
+  position: fixed;
+  top: 23px;
+  opacity: 0.8;
+  width: 20px;
+  height: 10px;
+  animation-name: period;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: period; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+}
+@keyframes period {/* Standard syntax */
+  from {transform: translateX(0px); opacity: 0.8;}
+  to {transform: translateX(1000px); opacity: 0;}
+}
+@-webkit-keyframes period {/* Chrome, Safari, Opera */
+  from {transform: translateX(0px); opacity: 0.8;}
+  to {transform: translateX(1000px); opacity: 0;}
+}
+
+.node .ball-rounding {
+  animation-name: ball-rounding; /* Standard syntax */
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: ball-rounding; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 6s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+.node .ball-rounding-fast {
+  animation-name: ball-rounding; /* Standard syntax */
+  animation-duration: 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: ball-rounding; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 4s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+.node .ball-rounding-faster {
+  animation-name: ball-rounding; /* Standard syntax */
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: ball-rounding; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+@keyframes ball-rounding {/* Standard syntax */
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+@-webkit-keyframes ball-rounding {/* Chrome, Safari, Opera */
+  0% {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(360deg);}
+}
+.node .ball-beat {
+  animation-name: ball-beat; /* Standard syntax */
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: ball-beat; /* Chrome, Safari, Opera */
+  -webkit-animation-duration: 2s;
+  -webkit-animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+@keyframes ball-beat {/* Standard syntax */
+  0% {transform: scale(1);}
+  50% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+@-webkit-keyframes ball-beat {/* Chrome, Safari, Opera */
+  0% {-webkit-transform: scale(1);}
+  50% {-webkit-transform: scale(0.8);}
+  100% {-webkit-transform: scale(1);}
+}

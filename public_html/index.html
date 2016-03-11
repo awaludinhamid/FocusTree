@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="jQuery/css/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="d3/css/tree.css"/>
+    <link rel="stylesheet" href="css/focus.css"/>
+    <link rel="stylesheet" href="css/loading.css"/>
+    <script src="jQuery/js/jquery.min.js"></script>
+    <script src="jQuery/js/jquery-ui.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="d3/js/d3.js"></script>
+    <script src="d3/js/d3.layout.tree.js"></script>
+    <script src="js/globalvar.js"></script>
+    <script src="js/globalfunc.js"></script>
+    <script src="js/json_data1.js"></script>
+    <script src="js/index.js"></script>
+    <title>KPI Control System</title>
+  </head>
+  <body>
+    <div class="left-back-pos back-def-style" hidden></div>
+    <div class="split-back back-def-style" hidden></div>
+    <div class="center-back-pos back-def-style" hidden></div>
+    <div id="usage">
+      <ul class="list-unstyled">
+        <li>Usage:</li>
+        <li>Change left option to see more different data</li>
+        <li>Hover the shape to see node detail</li>
+        <li>Click the shape to expand/collapse children node</li>
+        <li>Click the bar-text to see node breakdown/detail</li>
+      </ul>
+    </div>
+    <div id="period-anime">
+      <svg width="20" height="10" overflow="hidden">
+        <ellipse cx="10" cy="5" rx="10" ry="5" fill="white"/>
+      </svg>
+    </div>
+    <div id="insetBgd">
+      <div id="otherMenu">
+        <span>Powered by SafaSoft<sup>&trade;</sup></span>
+      </div>
+      <div>
+        <span class="insetType">KPI Control System</span>
+      </div>
+      <div class="mirror">KPI Control System</div>
+    </div>
+    <div id="loading" style="display: none">
+      <img src="img/loading3.gif" alt="loading.."/>
+      <br/>
+      <span>Loading..</span>
+    </div>
+    <div id="backImage">
+      <img src="img/logo-jempol.png" alt="background-image"/>
+    </div>
+    <!--script>
+      $("#insetBgd").css("width","100%");
+    </script-->
+    <div class="app-def-position">
+      <div id="kpiSelect">
+      </div>
+    </div>
+    <div id="zoom-slider">
+      <button id="btn-zoom-in" class="glyphicon glyphicon-minus" title="Zoom In"></button>
+      <button id="btn-slider">|</button>
+      <button id="btn-zoom-out" class="glyphicon glyphicon-plus" title="Zoom Out"></button>
+      <button id="btn-expand-collapse" class="glyphicon glyphicon-resize-small" title="Collapse All"></button>
+      <button id="btn-back" class="glyphicon glyphicon-triangle-left">&nbsp;Back</button>
+    </div>
+    <div class="modal fade" id="mdl-detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Detail</h4>
+          </div>
+          <div class="modal-body">
+            <span id="title"></span>
+            <table class="table table-striped table-bordered">
+              <thead style="background-color: #37b; color: white">
+                <tr style="text-align: center">
+                  <td>Name</td><td>Value</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Target</td><td id="target" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Batas Atas</td><td id="batasAtas" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Batas Bawah</td><td id="batasBawah" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Actual</td><td id="actual" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Achieve</td><td id="achieve" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td nowrap>Last Month</td><td id="lastMonth" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Growth</td><td id="growth" style="text-align: right"></td>
+                </tr>
+                <tr>
+                  <td>Populate</td><td id="populate" style="text-align: center"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="modal-footer">
+            <button id="btn-ok" type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
